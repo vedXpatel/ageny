@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
-import dynamic from "next/dynamic";
-
-const DarkModeToggle = dynamic(() => import("@/components/DarkModeToggle"), { ssr: false });
+import ClientLayout from "@/components/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <div className="fixed top-4 right-4 z-50">
-          {/* Dark mode toggle button */}
-          <DarkModeToggle />
-        </div>
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
         <Toaster />
       </body>
     </html>
