@@ -10,11 +10,7 @@ import {
   Palette, 
   Cloud, 
   Settings, 
-  Database, 
-  Shield,
   Zap,
-  BarChart3,
-  Users,
   Target
 } from 'lucide-react'
 

@@ -8,16 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  Send,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { toast } from 'sonner'
 
 const Contact = () => {
@@ -28,12 +19,12 @@ const Contact = () => {
     projectType: '',
     budget: '',
     timeline: '',
-    message: ''
+    message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,11 +32,11 @@ const Contact = () => {
     setIsSubmitting(true)
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000))
 
     // Show success message
-    toast.success('Thank you for your message! We\'ll get back to you within 24 hours.')
-    
+    toast.success('Thank you for your message! We&apos;ll get back to you within 24 hours.')
+
     // Reset form
     setFormData({
       name: '',
@@ -54,9 +45,9 @@ const Contact = () => {
       projectType: '',
       budget: '',
       timeline: '',
-      message: ''
+      message: '',
     })
-    
+
     setIsSubmitting(false)
   }
 
@@ -65,26 +56,26 @@ const Contact = () => {
       icon: Mail,
       title: 'Email Us',
       details: 'hello@vedxagency.com',
-      description: 'Send us an email anytime and we\'ll respond within 24 hours'
+      description: 'Send us an email anytime and we&apos;ll respond within 24 hours',
     },
     {
       icon: Phone,
       title: 'Call Us',
       details: '+1 (555) 123-4567',
-      description: 'Speak directly with our team during business hours'
+      description: 'Speak directly with our team during business hours',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       details: 'San Francisco, CA',
-      description: 'Schedule an in-person meeting at our office'
+      description: 'Schedule an in-person meeting at our office',
     },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Mon - Fri, 9AM - 6PM PST',
-      description: 'We\'re available during standard business hours'
-    }
+      description: 'We&apos;re available during standard business hours',
+    },
   ]
 
   const projectTypes = [
@@ -95,7 +86,7 @@ const Contact = () => {
     'UI/UX Design',
     'Website Redesign',
     'Custom Software',
-    'Other'
+    'Other',
   ]
 
   const budgetRanges = [
@@ -104,17 +95,10 @@ const Contact = () => {
     '$25,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000+',
-    'Not Sure'
+    'Not Sure',
   ]
 
-  const timelineOptions = [
-    '1-2 months',
-    '3-4 months',
-    '5-6 months',
-    '6+ months',
-    'ASAP',
-    'Not Sure'
-  ]
+  const timelineOptions = ['1-2 months', '3-4 months', '5-6 months', '6+ months', 'ASAP', 'Not Sure']
 
   return (
     <section id="contact" className="py-20 bg-gray-50 relative overflow-hidden">
@@ -132,14 +116,16 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" className="mb-4">Get In Touch</Badge>
+          <Badge variant="secondary" className="mb-4">
+            Get In Touch
+          </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            Let's Start
+            Let&apos;s Start
             <span className="text-gradient block">Your Project</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge digital solutions? 
-            Let's discuss your project and how we can help bring your vision to life.
+            Ready to transform your business with cutting-edge digital solutions? Let&apos;s discuss your project and
+            how we can help bring your vision to life.
           </p>
         </motion.div>
 
@@ -159,16 +145,14 @@ const Contact = () => {
                   Send Us a Message
                 </CardTitle>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you within 24 hours to discuss your project.
+                  Fill out the form below and we&apos;ll get back to you within 24 hours to discuss your project.
                 </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                       <Input
                         required
                         value={formData.name}
@@ -178,9 +162,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                       <Input
                         required
                         type="email"
@@ -194,9 +176,7 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Company Name
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
                       <Input
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
@@ -205,16 +185,19 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Project Type *
-                      </label>
-                      <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Project Type *</label>
+                      <Select
+                        value={formData.projectType}
+                        onValueChange={(value) => handleInputChange('projectType', value)}
+                      >
                         <SelectTrigger>
                           <SelectValue placeholder="Select project type" />
                         </SelectTrigger>
                         <SelectContent>
                           {projectTypes.map((type) => (
-                            <SelectItem key={type} value={type}>{type}</SelectItem>
+                            <SelectItem key={type} value={type}>
+                              {type}
+                            </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
@@ -223,31 +206,31 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Budget Range
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
                       <Select value={formData.budget} onValueChange={(value) => handleInputChange('budget', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
                         <SelectContent>
                           {budgetRanges.map((budget) => (
-                            <SelectItem key={budget} value={budget}>{budget}</SelectItem>
+                            <SelectItem key={budget} value={budget}>
+                              {budget}
+                            </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Timeline
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Timeline</label>
                       <Select value={formData.timeline} onValueChange={(value) => handleInputChange('timeline', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select timeline" />
                         </SelectTrigger>
                         <SelectContent>
                           {timelineOptions.map((timeline) => (
-                            <SelectItem key={timeline} value={timeline}>{timeline}</SelectItem>
+                            <SelectItem key={timeline} value={timeline}>
+                              {timeline}
+                            </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
@@ -255,9 +238,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Details *
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Project Details *</label>
                     <Textarea
                       required
                       value={formData.message}
@@ -268,11 +249,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full py-3 text-lg"
-                  >
+                  <Button type="submit" disabled={isSubmitting} className="w-full py-3 text-lg">
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -366,27 +343,21 @@ const Contact = () => {
                 <MessageSquare className="h-8 w-8 text-blue-600" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Live Chat</h4>
-              <p className="text-gray-600 text-sm">
-                Chat with our team in real-time during business hours
-              </p>
+              <p className="text-gray-600 text-sm">Chat with our team in real-time during business hours</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="h-8 w-8 text-purple-600" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Email Support</h4>
-              <p className="text-gray-600 text-sm">
-                Send us detailed project requirements via email
-              </p>
+              <p className="text-gray-600 text-sm">Send us detailed project requirements via email</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="h-8 w-8 text-green-600" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Phone Call</h4>
-              <p className="text-gray-600 text-sm">
-                Schedule a call to discuss your project in detail
-              </p>
+              <p className="text-gray-600 text-sm">Schedule a call to discuss your project in detail</p>
             </div>
           </div>
         </motion.div>

@@ -10,40 +10,40 @@ const About = () => {
     {
       icon: Target,
       title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering solutions that exceed expectations.'
+      description: 'We strive for excellence in every project, delivering solutions that exceed expectations.',
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We believe in working closely with our clients to ensure their vision becomes reality.'
+      description: 'We believe in working closely with our clients to ensure their vision becomes reality.',
     },
     {
       icon: Zap,
       title: 'Innovation',
-      description: 'We stay ahead of the curve with cutting-edge technologies and creative solutions.'
+      description: 'We stay ahead of the curve with cutting-edge technologies and creative solutions.',
     },
     {
       icon: Shield,
       title: 'Reliability',
-      description: 'We deliver on time, every time, with robust and scalable solutions.'
+      description: 'We deliver on time, every time, with robust and scalable solutions.',
     },
     {
       icon: Heart,
       title: 'Passion',
-      description: 'We\'re passionate about creating digital experiences that make a difference.'
+      description: "We're passionate about creating digital experiences that make a difference.",
     },
     {
       icon: CheckCircle,
       title: 'Quality',
-      description: 'Quality is non-negotiable. We test thoroughly and maintain high standards.'
-    }
+      description: 'Quality is non-negotiable. We test thoroughly and maintain high standards.',
+    },
   ]
 
   const stats = [
     { number: '5+', label: 'Years Experience' },
     { number: '50+', label: 'Projects Completed' },
     { number: '100%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '24/7', label: 'Support Available' },
   ]
 
   return (
@@ -62,14 +62,16 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" className="mb-4">About Us</Badge>
+          <Badge variant="secondary" className="mb-4">
+            About Us
+          </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            We're More Than Just
+            We&apos;re More Than Just
             <span className="text-gradient block">Developers</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're a team of passionate creators, problem-solvers, and digital innovators 
-            dedicated to transforming businesses through exceptional web experiences.
+            We&apos;re a team of passionate creators, problem-solvers, and digital innovators dedicated to transforming
+            businesses through exceptional web experiences.
           </p>
         </motion.div>
 
@@ -85,21 +87,21 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Founded in 2019, VedX Agency began with a simple mission: to create web applications 
-                that don't just look good, but drive real business results. What started as a small 
-                team of developers has grown into a full-service digital agency.
+                Founded in 2019, VedX Agency began with a simple mission: to create web applications that don&apos;t
+                just look good, but drive real business results. What started as a small team of developers has grown
+                into a full-service digital agency.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Today, we're proud to have helped dozens of businesses transform their digital presence, 
-                from startups to enterprise companies, across various industries and markets.
+                Today, we&apos;re proud to have helped dozens of businesses transform their digital presence, from
+                startups to enterprise companies, across various industries and markets.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To empower businesses with cutting-edge digital solutions that drive growth, 
-                enhance user engagement, and create lasting competitive advantages in the digital marketplace.
+                To empower businesses with cutting-edge digital solutions that drive growth, enhance user engagement,
+                and create lasting competitive advantages in the digital marketplace.
               </p>
             </div>
           </motion.div>
@@ -164,8 +166,8 @@ const About = () => {
         >
           <h3 className="text-3xl font-bold text-gray-900 mb-6">Meet Our Team</h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Our diverse team brings together expertise in development, design, strategy, and business 
-            to deliver comprehensive solutions that drive results.
+            Our diverse team brings together expertise in development, design, strategy, and business to deliver
+            comprehensive solutions that drive results.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="hover-lift">
@@ -176,7 +178,8 @@ const About = () => {
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Ved Patel</h4>
                 <p className="text-blue-600 font-medium mb-2">Founder & Lead Developer</p>
                 <p className="text-gray-600 text-sm">
-                  Full-stack developer with expertise in modern web technologies and a passion for creating exceptional user experiences.
+                  Full-stack developer with expertise in modern web technologies and a passion for creating exceptional
+                  user experiences.
                 </p>
               </CardContent>
             </Card>
@@ -188,7 +191,8 @@ const About = () => {
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">John Doe</h4>
                 <p className="text-blue-600 font-medium mb-2">Senior Developer</p>
                 <p className="text-gray-600 text-sm">
-                  Specialized in React and Node.js development with a focus on scalable architecture and performance optimization.
+                  Specialized in React and Node.js development with a focus on scalable architecture and performance
+                  optimization.
                 </p>
               </CardContent>
             </Card>
@@ -200,7 +204,8 @@ const About = () => {
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Jane Smith</h4>
                 <p className="text-blue-600 font-medium mb-2">UI/UX Designer</p>
                 <p className="text-gray-600 text-sm">
-                  Creative designer focused on user-centered design principles and creating intuitive, beautiful interfaces.
+                  Creative designer focused on user-centered design principles and creating intuitive, beautiful
+                  interfaces.
                 </p>
               </CardContent>
             </Card>

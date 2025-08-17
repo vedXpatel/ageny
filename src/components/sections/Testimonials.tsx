@@ -99,8 +99,8 @@ const Testimonials = () => {
             <span className="text-gradient block">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about their experience 
-            working with VedX Agency and the results we've delivered.
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience 
+            working with VedX Agency and the results we&apos;ve delivered.
           </p>
         </motion.div>
 
@@ -163,7 +163,7 @@ const Testimonials = () => {
                 </CardHeader>
                 <CardContent className="pt-0">
                   <blockquote className="text-gray-600 leading-relaxed mb-4">
-                    "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                   </blockquote>
                   <div className="flex flex-wrap gap-2">
                     {testimonial.technologies.map((tech, techIndex) => (
@@ -189,11 +189,11 @@ const Testimonials = () => {
           <div className="text-center">
             <Quote className="h-16 w-16 text-blue-600 mx-auto mb-6" />
             <blockquote className="text-xl text-gray-700 leading-relaxed mb-6 max-w-4xl mx-auto">
-              "VedX Agency didn't just build us a website—they built us a digital foundation that has transformed our business. 
+              &quot;VedX Agency didn&apos;t just build us a website—they built us a digital foundation that has transformed our business. 
               Their expertise in modern web technologies, attention to detail, and commitment to our success exceeded all expectations. 
-              The team's professionalism and technical skills are unmatched. We've seen a 400% increase in online engagement and our 
-              customers love the new experience. If you're looking for a development partner who truly understands business needs 
-              and delivers exceptional results, look no further than VedX Agency."
+              The team&apos;s professionalism and technical skills are unmatched. We&apos;ve seen a 400% increase in online engagement and our 
+              customers love the new experience. If you&apos;re looking for a development partner who truly understands business needs 
+              and delivers exceptional results, look no further than VedX Agency.&quot;
             </blockquote>
             <div className="flex items-center justify-center space-x-4">
               <Avatar className="h-16 w-16">
@@ -226,7 +226,7 @@ const Testimonials = () => {
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Join Our Success Stories?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can help transform your business with our proven development expertise and commitment to excellence.
+              Let&apos;s discuss how we can help transform your business with our proven development expertise and commitment to excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
