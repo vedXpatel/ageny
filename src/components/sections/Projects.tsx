@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Badge as BadgeIcon, ExternalLink, Github, Globe, Smartphone } from 'lucide-react'
+import { ExternalLink, Github, Globe, Smartphone } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
@@ -70,7 +70,7 @@ const Projects = () => {
     }
   ]
 
-  const categories = ['All', 'Web Application', 'Website', 'Mobile App', 'API']
+  // const categories = ['All', 'Web Application', 'Website', 'Mobile App', 'API']
 
   return (
     <section id="projects" className="py-20 bg-white relative overflow-hidden">
@@ -227,7 +227,7 @@ const Projects = () => {
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can help bring your vision to life with our expertise in modern web development.
+              Let&apos;s discuss how we can help bring your vision to life with our expertise in modern web development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
