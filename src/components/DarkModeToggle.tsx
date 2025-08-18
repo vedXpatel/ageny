@@ -1,31 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
     // On mount, check localStorage or system preference
-    const stored = localStorage.getItem('theme');
+    const stored = localStorage.getItem('theme')
     if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
+      document.documentElement.classList.add('dark')
+      setIsDark(true)
     } else {
-      document.documentElement.classList.remove('dark');
-      setIsDark(false);
+      document.documentElement.classList.remove('dark')
+      setIsDark(false)
     }
-  }, []);
+  }, [])
 
   const toggleDark = () => {
     if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDark(false);
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+      setIsDark(false)
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDark(true);
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+      setIsDark(true)
     }
-  };
+  }
 
   return (
     <button
@@ -35,5 +35,5 @@ export default function DarkModeToggle() {
     >
       {isDark ? '🌙 Dark' : '☀️ Light'}
     </button>
-  );
+  )
 }

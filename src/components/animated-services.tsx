@@ -1,43 +1,43 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export function AnimatedServices() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   const services = [
     {
-      title: "Web Development",
-      description: "Custom web applications built with modern frameworks and best practices",
-      icon: "🌐",
-      color: "from-blue-500 to-cyan-500",
-      delay: 0.1
+      title: 'Web Development',
+      description: 'Custom web applications built with modern frameworks and best practices',
+      icon: '🌐',
+      color: 'from-blue-500 to-cyan-500',
+      delay: 0.1,
     },
     {
-      title: "Mobile Apps",
-      description: "Cross-platform mobile applications using React Native and Flutter",
-      icon: "📱",
-      color: "from-purple-500 to-pink-500",
-      delay: 0.2
+      title: 'Mobile Apps',
+      description: 'Cross-platform mobile applications using React Native and Flutter',
+      icon: '📱',
+      color: 'from-purple-500 to-pink-500',
+      delay: 0.2,
     },
     {
-      title: "API Development",
-      description: "RESTful and GraphQL APIs with proper documentation and testing",
-      icon: "🔌",
-      color: "from-green-500 to-emerald-500",
-      delay: 0.3
+      title: 'API Development',
+      description: 'RESTful and GraphQL APIs with proper documentation and testing',
+      icon: '🔌',
+      color: 'from-green-500 to-emerald-500',
+      delay: 0.3,
     },
     {
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive user interfaces that enhance user experience",
-      icon: "🎨",
-      color: "from-orange-500 to-red-500",
-      delay: 0.4
-    }
-  ];
+      title: 'UI/UX Design',
+      description: 'Beautiful, intuitive user interfaces that enhance user experience',
+      icon: '🎨',
+      color: 'from-orange-500 to-red-500',
+      delay: 0.4,
+    },
+  ]
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
@@ -47,15 +47,13 @@ export function AnimatedServices() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="mx-auto max-w-2xl text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What We Do
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What We Do</h2>
           <p className="mt-4 text-lg text-gray-600">
             Comprehensive web development services to bring your vision to life
           </p>
@@ -76,7 +74,7 @@ export function AnimatedServices() {
                 <motion.div
                   className="absolute inset-0 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
-                    background: `linear-gradient(135deg, ${service.color.split(' ')[0].replace('from-', '')} 0%, ${service.color.split(' ')[1].replace('to-', '')} 100%)`
+                    background: `linear-gradient(135deg, ${service.color.split(' ')[0].replace('from-', '')} 0%, ${service.color.split(' ')[1].replace('to-', '')} 100%)`,
                   }}
                   animate={{
                     y: [0, -5, 0],
@@ -84,18 +82,18 @@ export function AnimatedServices() {
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "easeInOut",
+                    ease: 'easeInOut',
                     delay: index * 0.2,
                   }}
                 />
-                
+
                 <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-2xl transition-all duration-500 group-hover:border-transparent">
                   {/* Animated Icon */}
-                  <motion.div 
+                  <motion.div
                     className="text-6xl mb-6 flex justify-center"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.2,
-                      rotate: [0, -10, 10, 0]
+                      rotate: [0, -10, 10, 0],
                     }}
                     transition={{ duration: 0.5 }}
                   >
@@ -116,7 +114,7 @@ export function AnimatedServices() {
                   <motion.div
                     className="absolute inset-0 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-500"
                     style={{
-                      background: `linear-gradient(135deg, ${service.color.split(' ')[0].replace('from-', '')} 0%, ${service.color.split(' ')[1].replace('to-', '')} 100%)`
+                      background: `linear-gradient(135deg, ${service.color.split(' ')[0].replace('from-', '')} 0%, ${service.color.split(' ')[1].replace('to-', '')} 100%)`,
                     }}
                   />
                 </div>
@@ -126,5 +124,5 @@ export function AnimatedServices() {
         </div>
       </div>
     </section>
-  );
+  )
 }

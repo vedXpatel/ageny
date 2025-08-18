@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
 
 export function AnimatedCTA() {
   return (
@@ -12,15 +12,15 @@ export function AnimatedCTA() {
           className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800"
           animate={{
             background: [
-              "linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #1d4ed8 100%)",
-              "linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #7c3aed 100%)",
-              "linear-gradient(135deg, #7c3aed 0%, #1d4ed8 50%, #2563eb 100%)",
+              'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #1d4ed8 100%)',
+              'linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #7c3aed 100%)',
+              'linear-gradient(135deg, #7c3aed 0%, #1d4ed8 50%, #2563eb 100%)',
             ],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "linear",
+            ease: 'linear',
           }}
         />
       </div>
@@ -37,7 +37,7 @@ export function AnimatedCTA() {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         />
         <motion.div
@@ -50,7 +50,7 @@ export function AnimatedCTA() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
             delay: 1,
           }}
         />
@@ -63,7 +63,7 @@ export function AnimatedCTA() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
             delay: 2,
           }}
         />
@@ -77,7 +77,7 @@ export function AnimatedCTA() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           {/* Animated Heading */}
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,9 +86,9 @@ export function AnimatedCTA() {
           >
             Ready to Start Your Project?
           </motion.h2>
-          
+
           {/* Animated Description */}
-          <motion.p 
+          <motion.p
             className="mt-4 text-lg text-blue-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,33 +99,27 @@ export function AnimatedCTA() {
           </motion.p>
 
           {/* Animated Buttons */}
-          <motion.div 
+          <motion.div
             className="mt-10 flex items-center justify-center gap-x-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
-                variant="secondary" 
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                variant="secondary"
                 className="bg-white text-blue-600 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Contact Us
               </Button>
             </motion.div>
-            
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
-                variant="outline" 
+
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Schedule a Call
@@ -134,7 +128,7 @@ export function AnimatedCTA() {
           </motion.div>
 
           {/* Floating Action Items */}
-          <motion.div 
+          <motion.div
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -142,9 +136,9 @@ export function AnimatedCTA() {
             viewport={{ once: true }}
           >
             {[
-              { icon: "📧", text: "Email us directly", action: "hello@agency.com" },
-              { icon: "📞", text: "Call us now", action: "+1 (555) 123-4567" },
-              { icon: "💬", text: "Live chat", action: "Available 24/7" }
+              { icon: '📧', text: 'Email us directly', action: 'hello@agency.com' },
+              { icon: '📞', text: 'Call us now', action: '+1 (555) 123-4567' },
+              { icon: '💬', text: 'Live chat', action: 'Available 24/7' },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -155,7 +149,7 @@ export function AnimatedCTA() {
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <motion.div 
+                <motion.div
                   className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300"
                   whileHover={{ rotate: [0, -10, 10, 0] }}
                   transition={{ duration: 0.5 }}
@@ -187,5 +181,5 @@ export function AnimatedCTA() {
         </motion.svg>
       </div>
     </section>
-  );
+  )
 }

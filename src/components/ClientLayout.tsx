@@ -1,5 +1,5 @@
-"use client";
-import DarkModeToggle from "@/components/DarkModeToggle";
+'use client'
+import DarkModeToggle from '@/components/DarkModeToggle'
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,5 +9,5 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       </div>
       {children}
     </>
-  );
+  )
 }
