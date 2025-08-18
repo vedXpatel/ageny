@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
 
 export function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
@@ -20,19 +20,34 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a
+                href="#home"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Home
               </a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a
+                href="#services"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Services
               </a>
-              <a href="#projects" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a
+                href="#projects"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Projects
               </a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a
+                href="#about"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 About
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              <a
+                href="#contact"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Contact
               </a>
             </div>
@@ -40,9 +55,7 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Get Started
-            </Button>
+            <Button className="bg-blue-600 hover:bg-blue-700">Get Started</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -86,13 +99,11 @@ export function Navigation() {
               Contact
             </a>
             <div className="pt-4">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Get Started
-              </Button>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700">Get Started</Button>
             </div>
           </div>
         </div>
       )}
     </nav>
-  );
+  )
 }
